@@ -6,7 +6,6 @@ import lombok.*;
 @Builder
 public class Table {
 
-    private float X;
-    private float Y;
+    private int id;
     private int seats_number;
 }
