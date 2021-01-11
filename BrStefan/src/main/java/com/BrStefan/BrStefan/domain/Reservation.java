@@ -8,11 +8,12 @@ import java.util.Date;
 @Builder
 public class Reservation {
 
-    private User owner;
+    private String id;
+    private String owner;
     private int number_of_guests;
-    private Date date;
+    private Date reservation_date;
     private boolean confirmed;
     private boolean honored;
-    private Table table;
+    private int table;
 
 }

@@ -74,7 +74,7 @@ public class UserRepository {
         }
     }
 
-    private RowMapper<User> buildUser(){
+    public RowMapper<User> buildUser(){
          RowMapper<User> rowMapper = (resultSet, rowNo) -> User.builder()
                 .id(resultSet.getInt("Id"))
                 .username(resultSet.getString("Username"))

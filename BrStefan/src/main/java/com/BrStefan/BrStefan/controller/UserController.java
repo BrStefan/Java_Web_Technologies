@@ -10,10 +10,7 @@ import com.BrStefan.BrStefan.exceptions.UserRoleException;
 import com.BrStefan.BrStefan.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
@@ -48,12 +45,11 @@ public class UserController {
 
 
     @PostMapping("/login")
-    public ResponseEntity<Object>login(@RequestBody @Valid UserLoginDTO user){
-        try{
+    public ResponseEntity<Object>login(@RequestBody @Valid UserLoginDTO user) {
+        try {
             User user_response = userService.login(user);
             return ResponseEntity.ok().body(user_response);
-        }
-        catch (LoginException e){
+        } catch (LoginException e) {
             return ResponseEntity.status(401).body("Invalid Credentials!");
         }
     }
