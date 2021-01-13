@@ -8,6 +8,7 @@ import java.util.List;
 @Builder
 public class Menu {
 
+    private int id;
     private String name;
-    private List<Food> products;
+    private String description;
 }

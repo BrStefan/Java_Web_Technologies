@@ -9,13 +9,11 @@ import com.BrStefan.BrStefan.exceptions.ConfirmReservationException;
 import com.BrStefan.BrStefan.exceptions.GetReservationsException;
 import com.BrStefan.BrStefan.exceptions.HonorException;
 import com.BrStefan.BrStefan.service.ReservationService;
-import com.fasterxml.jackson.annotation.JsonFormat;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-import java.util.Date;
 import java.util.List;
 
 @RestController
@@ -79,5 +77,11 @@ public class ReservationController {
             return ResponseEntity.status(401).body(e.getMessage());
         }
 
+    }
+
+    @GetMapping("/old")
+    private ResponseEntity<Object>older(@RequestBody String user_id){
+        System.out.println(user_id);
+        return ResponseEntity.ok().body("Test");
     }
 }

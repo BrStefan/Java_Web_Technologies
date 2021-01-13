@@ -22,14 +22,6 @@ public class UserService {
         return userRepository.login(user);
     }
 
-//    public List<User> getAll(){
-//        return userRepository.getAll();
-//    }
-//
-//    public User delete(User user){
-//        return userRepository.delete(user);
-//    }
-
     public void rankUp(RankUpDTO rankup){
         userRepository.rankUp(rankup);
     }
