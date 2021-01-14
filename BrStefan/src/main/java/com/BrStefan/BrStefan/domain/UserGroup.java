@@ -7,9 +7,8 @@ import lombok.*;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Menu {
-
+public class UserGroup {
     private int id;
-    private String name;
-    private String description;
+    private int user_id;
+    private int group_id;
 }

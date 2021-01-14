@@ -46,7 +46,7 @@ public class UserRepository {
 
     }
 
-    private User getUser(String username) {
+    public User getUser(String username) {
         String selectSql = "SELECT * from users WHERE users.Username = ?";
 
         RowMapper<User> rowMapper = buildUser();
@@ -86,14 +86,6 @@ public class UserRepository {
          return rowMapper;
     }
 
-//    public List<User> getAll(){
-//        return users;
-//    }
-
-//    public User delete(User user){
-//        users.remove(user);
-//        return user;
-//    }
 
     public void rankUp(RankUpDTO rankup){
         User user = getUserById(rankup.getUser_id());
