@@ -4,6 +4,7 @@ import com.BrStefan.BrStefan.domain.User;
 import com.BrStefan.BrStefan.domain.dto.RankUpDTO;
 import com.BrStefan.BrStefan.domain.dto.UserLoginDTO;
 import com.BrStefan.BrStefan.domain.dto.UserRegisterDTO;
+import com.BrStefan.BrStefan.exceptions.UserExistsException;
 import com.BrStefan.BrStefan.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
